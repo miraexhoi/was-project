@@ -13,7 +13,7 @@ public class QueryStrings {
                 .forEach(queryString -> {
                     String[] values = queryString.split("=");
                     if (values.length != 2) {
-                        throw new IllegalArgumentException("잘못된 QueryString 포멧을 가진 문자열 입니다.")
+                        throw new IllegalArgumentException("잘못된 QueryString 포멧을 가진 문자열 입니다.");
                     }
                 });
     }
