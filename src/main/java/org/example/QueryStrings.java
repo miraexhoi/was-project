@@ -15,6 +15,7 @@ public class QueryStrings {
                     if (values.length != 2) {
                         throw new IllegalArgumentException("잘못된 QueryString 포멧을 가진 문자열 입니다.");
                     }
+                    queryStrings.add(new QueryString(values[0],values[1]));
                 });
     }
 }
