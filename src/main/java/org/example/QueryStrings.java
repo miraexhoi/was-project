@@ -18,4 +18,12 @@ public class QueryStrings {
                     queryStrings.add(new QueryString(values[0],values[1]));
                 });
     }
+
+    public String getValue(String key) {
+        return this.queryStrings.stream()
+                .filter(queryString -> queryString.exits(key))
+                .map(QueryString::getValue)
+                .findFirst()
+                .orElse(null);
+    }
 }
